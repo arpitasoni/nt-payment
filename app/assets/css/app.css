@@ -1,0 +1,151 @@
+* {
+	position: relative;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: 'SiteFont';
+	unicode-bidi: isolate;
+}
+.h1, .h2, .h3, h1, h2, h3 {
+	margin: 0;
+}
+body {
+	overflow-x: hidden;
+	min-width: 920px;
+	width: 100%;
+	background-color: black;
+}
+header {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 5;
+	width: 100%;
+	padding: 10px 0px;
+	min-width: 920px;
+}
+.cancelBtn{
+	margin-left: 10px;
+}
+.dateTime {
+	color:white;  
+	display:inline-block;
+	margin-left:30px;
+}
+.panel-heading {
+	display: inline;
+}
+.panel-title{
+	display: inline;
+	font-weight: bold;
+	color:black;
+	margin-top: 20px;
+	float: left;
+}
+.panel-heading img {
+	min-width: 180px;
+	float: right;
+}
+a {
+	font-size: 16px;
+	padding: 10px 0px;
+	color: white;
+	text-decoration: none; 
+}
+a:hover, a:visited, a:link, a:active
+{
+	text-decoration: none;
+	color:white;
+}
+.container {
+	padding: 0px;
+	direction: ltr;
+}
+footer
+{
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 10px 0;
+	min-width: 920px;
+}
+#ajax_loader {
+	position: fixed; 
+	left: 50%; 
+	top: 50%; 
+	display: none;
+}
+.form-group.required .control-label:after {
+	content:"*";
+	color:red;
+}
+.logo {
+	margin-left: 10px;
+
+}
+.other_services_box {
+	padding: 10% 0;
+	
+}
+.payment-service {
+	display:inline-block;
+	border:0;
+	width:196px;
+	height:210px;
+	position: relative;
+	-webkit-transition: all 200ms ease-in;
+	-webkit-transform: scale(1); 
+	-ms-transition: all 200ms ease-in;
+	-ms-transform: scale(1); 
+	-moz-transition: all 200ms ease-in;
+	-moz-transform: scale(1);
+	transition: all 200ms ease-in;
+	transform: scale(1);   
+
+}
+.payment-service:hover {
+	box-shadow: 0px 0px 150px #000000;
+	z-index: 2;
+	-webkit-transition: all 200ms ease-in;
+	-webkit-transform: scale(1.5);
+	-ms-transition: all 200ms ease-in;
+	-ms-transform: scale(1.5);   
+	-moz-transition: all 200ms ease-in;
+	-moz-transform: scale(1.5);
+	transition: all 200ms ease-in;
+	transform: scale(1.5);
+}
+
+.hrFooter {
+	width: 1170px;
+    margin-left: -35px;
+}
+footer .lower{
+	
+	color: #cecece;
+	padding: 35px;
+	text-align: right;
+
+}
+.services_links{
+	margin-top: 10px;
+	text-align: center;
+	width: 196px;
+}
+
+.ng-valid[required],.ng-valid.required{
+	border-left: 5px solid #42A948;
+}
+.ng-touched.ng-valid {
+    border-left: 5px solid #42A948;
+}
+
+.ng-submitted input.ng-invalid ,.ng-submitted select.ng-invalid{
+    border-left: 5px solid red;
+}
+.ng-touched.ng-invalid-required {
+    border-left: 5px solid red;
+}
+.ng-dirty:not(form) {
+  border-left: 5px solid red;
+}

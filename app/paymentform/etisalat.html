@@ -1,0 +1,52 @@
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="cancel()">&times;
+            </button>
+            <div class="panel-heading">
+               <h3 class="panel-title">Etisalat Payment</h3>
+            <img class="img-responsive" src="http://i76.imgup.net/accepted_c22e0.png">
+          </div>
+        </div>
+        <div class="modal-body">
+            <form role="form" name="paymentForm" novalidate ng-submit="submit()" ng-controller="MainCtrl">
+                <div class="form-group">
+                    <label for="name" class="control-label">Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Enter name" ng-model="payData.firstname" ng-pattern="/^[a-zA-Z]*$/">
+                    <div style="color:red">
+                       <span ng-show="paymentForm.name.$error.pattern">Enter valid name.</span>
+                    </div>
+                  
+                </div>
+                 
+                <div class="form-group required">
+                    <label for="acnt" class="control-label">Account Number</label>
+                    <input type="number" class="form-control" name="acnt" placeholder="Enter account number" ng-model="payData.account"  ng-pattern="/^[0-9]{10}$/"required>
+                   <div style="color:red" ng-show="paymentForm.$submitted || 
+                   paymentForm.acnt.$touched">
+                       <span ng-show="paymentForm.acnt.$error.required">Account is required.
+                       </span>
+                       <span ng-show="paymentForm.acnt.$error.pattern">Enter 10 digit account number</span>
+                     </div>
+                </div>
+
+                <div class="form-group required">
+                    <label for="amnt" class="control-label">Amount</label>
+                    <input type="number" class="form-control" name="amnt" placeholder="Enter amount" ng-model="payData.amount" ng-pattern="/^([5-9]|\d\d|[1-4]\d\d|4[0-9]\d|50[0-0])$/" required>
+                     <div style="color:red" ng-show="paymentForm.$submitted || paymentForm.amnt.$touched">
+                       <span ng-show="paymentForm.amnt.$error.required">Amount is required.
+                       </span>
+                       <span ng-show="paymentForm.amnt.$error.pattern">The number must be between 5-500</span>
+                     </div>
+                 </div>
+                
+
+                <button type="submit" class="btn btn-success" aria-hidden="true" ng-click="paymentForm.$valid && sendData(msg)">Pay Now</button>
+               <button type="button" class="btn btn-danger cancelBtn" data-dismiss="modal" ng-click="cancel()">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <div id='ajax_loader'>
+     <img src="assets/images/ajax-loader.gif"></img>
+</div>

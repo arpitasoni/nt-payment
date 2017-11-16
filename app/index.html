@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/app.css">
+	
+	<script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+
+
+	<title>NT.Payments</title>
+	<link rel="icon" type="image/png" href="assets/images/title.png" sizes="96x96">
+</head>
+
+<body ng-cloak>
+	<div class="container" ng-controller="MainCtrl">
+		<header>
+			<div class="logo">
+				<a href="/">
+					<img class="logo" src="assets/images/logo.png">
+				</a>
+				<div class="dateTime">
+ 				    <p style="font-size:20px;">{{ today | date : "h:mm a" }}</p>
+                    <p>{{ today | date : "EEEE  d MMM" }}</p>
+                </div>
+			</div><hr>
+			</header>
+			<main>
+			<div class="row">
+				<div class="col-xs-12" style="color:white; padding:20px;">
+						<h2>Services</h2>
+				</div>
+
+				<div class="element_vm col-sm-12 col-md-11 col-md-offset-1 col-lg-10 col-lg-offset-1">
+                    <div class="col-sm-12 col-lg-12 col-md-12">
+						<div class="col-md-3 col-sm-3 col-xs-3" ng-click="open('intPay')">
+							<div class="payment-service">
+								<a><img class="img-responsive" src="assets/images/international_payment.png" alt="International payments">
+								</a>
+								<div class="services_links"><a>International Payments</a></div>
+							</div>
+						</div>
+
+                       <div class="col-md-3 col-sm-3 col-xs-3" ng-click="open('du')">
+							<div class="payment-service">
+								<a><img class="img-responsive" src="assets/images/du.png" alt="DU Payment">
+								</a>
+								<div class="services_links"><a>Du</a></div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-3 col-xs-3" ng-click="open('etisalat')">
+							<div class="payment-service">
+								<a><img class="img-responsive" src="assets/images/etisalat.jpg" alt="Etisalat">
+								</a>
+								<div class="services_links"><a>Etisalat</a></div>
+							</div>
+						 </div>
+
+						 <div class="col-md-3 col-sm-3 col-xs-3" ng-click="open('salik')">
+							<div class="payment-service">
+								<a><img class="img-responsive" src="assets/images/salik.png" alt="Salik Recharge">
+								</a>
+								<div class="services_links"><a>Salik Recharge</a></div>
+							</div>
+						 </div>
+					  </div>
+					</div>
+				</div>
+
+			</main>
+
+			<footer>
+                <div class="lower">
+                	<hr class="hrFooter">
+					<div class="col-xs-12">
+                        <span>Support: 800-KIOSK (800-54675)</span>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script data-main="require-config" src="bower_components/requirejs/require.js">
+	</script>
+	
+</body>
+</html>
